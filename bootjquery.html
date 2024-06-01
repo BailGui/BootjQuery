@@ -99,6 +99,12 @@
                     $("#divFin").toggle();
                     });
                 });
+
+                $(document).ready(function () {
+                        $("#btnFout").click(function () {
+                    $("#divFout").toggle();
+                    });
+                });
     </script>
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
@@ -562,7 +568,7 @@
       <div id="divFin" style="display: none;">
         <hr style="width: 100%; color: white;">
         <h6 style="color: white;">
-        Permet de modifier le css d'un élément.</h6>
+        Permet d'afficher une image avec une animation de fondu.</h6>
         <br><br>
         <h6 style="color: white;">Exemple:</h6>
         <br><br>
@@ -589,25 +595,29 @@
         </script>
         </div>
 
-        <div id="divCss" style="display: none;">
+        <div id="divFout" style="display: none;">
           <hr style="width: 100%; color: white;">
           <h6 style="color: white;">
-          Permet de modifier le css d'un élément.</h6>
+          Permet de masquer une image avec une animation de fondu.</h6>
           <br><br>
           <h6 style="color: white;">Exemple:</h6>
           <br><br>
-          <button id="changeColorButton">Change Color</button>
+          <button id="btnFadeOut">.fadeOut</button>
           <br><br>
-          <p id="text" style="color: white;">le background du texte va changer de couleur.</p>
-        
-          <img id="imgCss" class="img-fluid" src="assets/img/css.png" alt="">
+          <img
+          id="imgOut"
+          src="assets/img/classic-cammy-4k-wallpapers-v0-5vkntlnpih3b1.jpg"
+          style="width: 45%; height: 45%"
+          />
+        <br><br>
+          <img id="imgCss" class="img-fluid" src="assets/img/fadeout.png" alt="">
           <br><br><br>
           <hr style="width: 100%; height: 3px ; color: white;">
         
           <script>
-            $(document).ready(function () {
-              $("#changeColorButton").click(function () {
-                $("#text").css("background-color", "red");
+            $(document).ready(function() {
+              $("#btnFadeOut").click(function() {
+                $("#imgOut").fadeOut(2000);
               });
             });
           </script>

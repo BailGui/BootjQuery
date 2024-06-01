@@ -100,6 +100,26 @@
           }, "slow");
         });
 
+         // fadeOut
+      $("#btnFadeOut").click(function () {
+        $("#textFadeOut").fadeOut();
+      });
+
+      // fadeToggle
+      $("#btnFadeToggle").click(function () {
+        $("#textFadeToggle").fadeToggle();
+      });
+
+      // fadeTo
+      $("#btnFadeTo").click(function () {
+        $("#textFadeTo").fadeTo("slow", 0.5);
+      });
+
+      // text
+      $("#btnText").click(function () {
+        $("#textText").text("Le texte a été changé par jQuery!");
+      });
+
         // Fonction queue et dequeue
         $("#btnQueue").click(function () {
           $("#textQueue").queue(function (next) {
@@ -163,6 +183,10 @@
             <button id="showDivPrepend" class="text-white" style="border: none; background-color: black"> Prepend avec Example</button>
             <button id="showDivAnimate" class="text-white" style="border: none; background-color: black"> Animate avec Example</button>
             <button id="showDivQueue" class="text-white" style="border: none; background-color: black"> Queue avec Example</button>
+            <button id="showDivFadeOut" class="text-white" style="border: none; background-color: black"> Fade Out avec Example</button>
+            <button id="showDivFadeToggle" class="text-white" style="border: none; background-color: black"> Fade Toggle avec Example</button>
+            <button id="showDivFadeTo" class="text-white" style="border: none; background-color: black"> Fade To avec Example</button>
+            <button id="showDivText" class="text-white" style="border: none; background-color: black"> Text avec Example</button>
             <br /><br />
             <!-- Slide Up Example -->
             <div id="divSup" style="display: none;" class="text-white-50">
@@ -323,6 +347,34 @@
               <br><br><br>
               <hr style="width: 100%; height: 3px ; color: white;">
             </div>
+
+             <!-- Div Fade Out -->
+             <div id="divFadeOut" style="display: none;">
+              <p class="text-white">Avec fadeOut(), vous pouvez animer la disparition progressive.</p>
+              <button id="btnFadeOut" class="text-white" style="border: none; background-color: black">Fade Out</button>
+              <p id="textFadeOut" class="text-white">Ceci est un texte pour démontrer fadeOut().</p>
+            </div>
+
+            <!-- Div Fade Toggle -->
+            <div id="divFadeToggle" style="display: none;">
+              <p class="text-white">Avec fadeToggle(), vous pouvez alterner l'apparition et la disparition progressive.</p>
+              <button id="btnFadeToggle" class="text-white" style="border: none; background-color: black">Fade Toggle</button>
+              <p id="textFadeToggle" class="text-white">Ceci est un texte pour démontrer fadeToggle().</p>
+            </div>
+
+            <!-- Div Fade To -->
+            <div id="divFadeTo" style="display: none;">
+              <p class="text-white">Avec fadeTo(), vous pouvez animer une transition vers un certain niveau d'opacité.</p>
+              <button id="btnFadeTo" class="text-white" style="border: none; background-color: black">Fade To</button>
+              <p id="textFadeTo" class="text-white">Ceci est un texte pour démontrer fadeTo().</p>
+            </div>
+
+            <!-- Div Text -->
+            <div id="divText" style="display: none;">
+              <p class="text-white">Avec text(), vous pouvez changer le contenu textuel d'un élément.</p>
+              <button id="btnText" class="text-white" style="border: none; background-color: black">Changer Texte</button>
+              <p id="textText" class="text-white">Ceci est un texte pour démontrer text().</p>
+            </div>
           </div>
         </div>
       </div>
@@ -366,12 +418,148 @@
     </section>
     <!-- Footer-->
     <footer class="footer bg-black small text-center text-white-50">
-      <div class="container px-4 px-lg-5">Copyright &copy;  Guillaume Baillieux 2024 & Ben Rami</div>
+      <div class="container px-4 px-lg-5">Copyright &copy; Guillame et Rami</div>
     </footer>
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"></script>
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
+  
+       <script>
+      $(document).ready(function() {
+        // Slide Up
+        $('#showDivSlideUp').click(function() {
+          $('#divSup').slideDown();
+        });
+
+        $('#animateSlideUpButton').click(function() {
+          $('#text').slideUp();
+        });
+
+        // Slide Down
+        $('#showDivSlideDown').click(function() {
+          $('#divSdown').slideDown();
+        });
+
+        $('#Sdownbtn').click(function() {
+          $('#textSdown').slideDown();
+        });
+
+        // CSS
+        $('#showDivCss').click(function() {
+          $('#divCss').slideDown();
+        });
+
+        $('#changeColorButton').click(function() {
+          $('#text').css('color', 'red');
+        });
+
+        // ReplaceWith
+        $('#showDivReplaceWith').click(function() {
+          $('#divReplaceWith').slideDown();
+        });
+
+        $('#btnReplaceWith').click(function() {
+          $('#textReplaceWith').replaceWith('<p class="text-white">Texte remplacé!</p>');
+        });
+
+        // Remove
+        $('#showDivRemove').click(function() {
+          $('#divRemove').slideDown();
+        });
+
+        $('#btnRemove').click(function() {
+          $('#textRemove').remove();
+        });
+
+        // After
+        $('#showDivAfter').click(function() {
+          $('#divAfter').slideDown();
+        });
+
+        $('#btnAfter').click(function() {
+          $('#textAfter').after('<p class="text-white">Texte ajouté après!</p>');
+        });
+
+        // Before
+        $('#showDivBefore').click(function() {
+          $('#divBefore').slideDown();
+        });
+
+        $('#btnBefore').click(function() {
+          $('#textBefore').before('<p class="text-white">Texte ajouté avant!</p>');
+        });
+
+        // Prepend
+        $('#showDivPrepend').click(function() {
+          $('#divPrepend').slideDown();
+        });
+
+        $('#btnPrepend').click(function() {
+          $('#textPrepend').prepend('<span class="text-white">Texte ajouté au début! </span>');
+        });
+
+        // Animate
+        $('#showDivAnimate').click(function() {
+          $('#divAnimate').slideDown();
+        });
+
+        $('#btnAnimate').click(function() {
+          $('#textAnimate').animate({
+            fontSize: '2em',
+            opacity: 0.5
+          }, 2000);
+        });
+
+        // Queue
+        $('#showDivQueue').click(function() {
+          $('#divQueue').slideDown();
+        });
+
+        $('#btnQueue').click(function() {
+          $('#textQueue').animate({ opacity: 0.5 }, 1000);
+          $('#textQueue').animate({ opacity: 1 }, 1000);
+        });
+
+        // Fade Out
+        $('#showDivFadeOut').click(function() {
+          $('#divFadeOut').slideDown();
+        });
+
+        $('#btnFadeOut').click(function() {
+          $('#textFadeOut').fadeOut();
+        });
+
+        // Fade Toggle
+        $('#showDivFadeToggle').click(function() {
+          $('#divFadeToggle').slideDown();
+        });
+
+        $('#btnFadeToggle').click(function() {
+          $('#textFadeToggle').fadeToggle();
+        });
+
+        // Fade To
+        $('#showDivFadeTo').click(function() {
+          $('#divFadeTo').slideDown();
+        });
+
+        $('#btnFadeTo').click(function() {
+          $('#textFadeTo').fadeTo('slow', 0.5);
+        });
+
+        // Text
+        $('#showDivText').click(function() {
+          $('#divText').slideDown();
+        });
+
+        $('#btnText').click(function() {
+          $('#textText').text('Le texte a été changé!');
+        });
+      });
+   
+      
+    </script>
   </body>
 </html>
