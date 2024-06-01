@@ -65,6 +65,12 @@
                 });
 
                 $(document).ready(function () {
+                        $("#btnSdown").click(function () {
+                    $("#divSdown").toggle();
+                    });
+                });
+
+                $(document).ready(function () {
                         $("#btnStoggle").click(function () {
                     $("#divStoggle").toggle();
                     });
@@ -387,10 +393,10 @@
                       <br><br>
                       <h6 style="color: white;">Exemple:</h6>
                       <br><br>
-                      <button id="animateSlideUpButton">Animate Hide Up</button>
+                      <button id="animateSlideUpButton">.slideUp</button>
                       <br><br>
-                        <p id="text">Ce texte va être masqué vers le haut avec une animation.</p>
-                        <img id="imgCss" class="img-fluid" src="assets/img/toggle.png" alt="">
+                        <p id="textSlideUp" style="color: white;">Ce texte va être masqué vers le haut avec une animation.</p>
+                        <img id="imgCss" class="img-fluid" src="assets/img/slideup.png" alt="">
                         <br><br><br>
                         <hr style="width: 100%; height: 3px ; color: white;">
                           <script>
@@ -403,6 +409,7 @@
                     </div>
                     
                 <div id="divSdown" style="display: none;" class="text-white-50">
+                  <hr style="width: 100%; color: white;">
                   <h6 style="color: white;">
                       Permet de faire apparaître et disparaitre un élément.</h6>
                       <br><br>
@@ -435,8 +442,8 @@
                   <br><br>
                   <button id="btnSlideToggle">.slideToggle</button>
                   <br><br>
-                  <div id="panel" style="display: none">Contenu à glisser</div>
-  
+                  <div id="panel" style="display: none; color: white;">Contenu à glisser</div>
+                  <br><br>
                   <img id="imgStoggle" class="img-fluid" src="assets/img/stoggle.png" alt="">
                   <br><br><br>
                   <hr style="width: 100%; height: 3px ; color: white;">
