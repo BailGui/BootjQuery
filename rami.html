@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Librairie" />
+    <meta name="author" content="jQueryBailGui" />
+    <title>Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <script type="text/javascript" src="jquery-3.7.1.min.js"></script>
+  </head>
+  <body id="page-top">
+    <script>
+      $(document).ready(function () {
+        // Fonctions pour afficher les différents div
+        $("#showDivSup").click(function () {
+          $("#divSup").show();
+        });
+        $("#showDivSdown").click(function () {
+          $("#divSdown").show();
+        });
+        $("#showDivCss").click(function () {
+          $("#divCss").show();
+        });
+        $("#showDivReplaceWith").click(function () {
+          $("#divReplaceWith").show();
+        });
+        $("#showDivRemove").click(function () {
+          $("#divRemove").show();
+        });
+        $("#showDivAfter").click(function () {
+          $("#divAfter").show();
+        });
+        $("#showDivBefore").click(function () {
+          $("#divBefore").show();
+        });
+        $("#showDivPrepend").click(function () {
+          $("#divPrepend").show();
+        });
+        $("#showDivAnimate").click(function () {
+          $("#divAnimate").show();
+        });
+        $("#showDivQueue").click(function () {
+          $("#divQueue").show();
+        });
+        
+        // Fonction pour animer la disparition vers le haut
+        $("#animateSlideUpButton").click(function () {
+          $("#text").slideUp();
+        });
+
+        // Fonction pour faire apparaître et disparaître un élément
+        $("#Sdownbtn").click(function () {
+          $("#textSdown").slideDown();
+        });
+
+        // Fonction pour changer la couleur de fond
+        $("#changeColorButton").click(function () {
+          $("#text").css("background-color", "red");
+        });
+
+        // Fonction replaceWith
+        $("#btnReplaceWith").click(function () {
+          $("#textReplaceWith").replaceWith("<p id='newTextReplaceWith' style='color: yellow;'>Texte remplacé</p>");
+        });
+
+        // Fonction remove
+        $("#btnRemove").click(function () {
+          $("#textRemove").remove();
+        });
+
+        // Fonction after
+        $("#btnAfter").click(function () {
+          $("#textAfter").after("<p id='newTextAfter' style='color: green;'>Nouveau texte après</p>");
+        });
+
+        // Fonction before
+        $("#btnBefore").click(function () {
+          $("#textBefore").before("<p id='newTextBefore' style='color: blue;'>Nouveau texte avant</p>");
+        });
+
+        // Fonction prepend
+        $("#btnPrepend").click(function () {
+          $("#textPrepend").prepend("<span id='newTextPrepend' style='color: red;'>Nouveau prepend </span>");
+        });
+
+        // Fonction animate
+        $("#btnAnimate").click(function () {
+          $("#textAnimate").animate({
+            height: "toggle",
+            opacity: "toggle"
+          }, "slow");
+        });
+
+        // Fonction queue et dequeue
+        $("#btnQueue").click(function () {
+          $("#textQueue").queue(function (next) {
+            $(this).text("Étape 1");
+            next();
+          }).queue(function (next) {
+            $(this).text("Étape 2");
+            next();
+          }).dequeue();
+        });
+
+      });
+    </script>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container px-4 px-lg-5">
+        <a id="logo" class="navbar-brand" href="#page-top">jQueryLibrary.</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a id="clickAbout" class="nav-link" href="#about">Méthodes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#signup">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Masthead-->
+    <header class="masthead">
+      <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+        <div class="d-flex justify-content-center">
+          <div class="text-center">
+            <h1 id="nom" class="mx-auto my-0 text-uppercase"></h1>
+            <h2 id="job" class="text-white-50 mx-auto mt-2 mb-5"></h2>
+            <br><br><br><br><br><br><br><br>
+            <a id="clickHere" class="btn btn-primary" href="#about">Cliquez ici</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- About-->
+    <section class="about-section text-center" id="about">
+      <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+          <div class="col-lg-8">
+            <h2 id="titlePres" class="text-white mb-4">Méthodes.</h2>
+            <!-- Boutons pour afficher les div -->
+            <button id="showDivSup" class="text-white" style="border: none; background-color: black"> Slide Up avec Example</button>
+            <button id="showDivSdown"class="text-white" style="border: none; background-color: black"> Slide Down avec Example</button>
+            <button id="showDivCss" class="text-white" style="border: none; background-color: black"> CSS avec Example</button>
+            <button id="showDivReplaceWith"class="text-white" style="border: none; background-color: black">Replace avec  Example</button>
+            <button id="showDivRemove" class="text-white" style="border: none; background-color: black"> Remove avec Example</button>
+            <button id="showDivAfter" class="text-white" style="border: none; background-color: black"> After avec Example</button>
+            <button id="showDivBefore" class="text-white" style="border: none; background-color: black"> Before avec Example</button>
+            <button id="showDivPrepend" class="text-white" style="border: none; background-color: black"> Prepend avec Example</button>
+            <button id="showDivAnimate" class="text-white" style="border: none; background-color: black"> Animate avec Example</button>
+            <button id="showDivQueue" class="text-white" style="border: none; background-color: black"> Queue avec Example</button>
+            <br /><br />
+            <!-- Slide Up Example -->
+            <div id="divSup" style="display: none;" class="text-white-50">
+              <hr style="width: 100%; color: white;">
+              <h6 style="color: white;">
+                Permet de cacher un élément avec une animation.
+              </h6>
+              <br><br>
+              <h6 style="color: white;">Exemple:</h6>
+              <br><br>
+              <button id="animateSlideUpButton">Animate Hide Up</button>
+              <br><br>
+              <p id="text">Ce texte va être masqué vers le haut avec une animation.</p>
+              <img id="imgCss" class="img-fluid" src="assets/img/toggle.png" alt="">
+              <br><br><br>
+              <hr style="width: 100%; height: 3px ; color: white;">
+            </div>
+            <!-- Slide Down Example -->
+            <div id="divSdown" style="display: none;" class="text-white-50">
+              <h6 style="color: white;">
+                Permet de faire apparaître et disparaitre un élément.
+              </h6>
+              <br><br>
+              <h6 style="color: white;">Exemple:</h6>
+              <br><br>
+              <button id="Sdownbtn">slideDown</button>
+              <br><br>
+              <p id="textSdown" style="color: white;">Ce texte va être masqué/affiché.</p>
+              <img id="imgCss" class="img-fluid" src="assets/img/toggle.png" alt="">
+              <br><br><br>
+              <hr style="width: 100%; height: 3px ; color: white;">
+            </div>
+            <!-- CSS Example -->
+            <div id="divCss" style="display: none;" class="text-white-50">
+              <hr style="width: 100%; color: white;">
+              <h6 style="color: white;">
+                Permet de modifier le css d'un élément.
+              </h6>
+              <br><br>
+              <h6 style="color: white;">Exemple:</h6>
+              <br><br>
+              <button id="changeColorButton">Change Color</button>
+              <br><br>
+              <p id="text" style="color: white;">Le background du texte va changer de couleur.</p>
+              <img id="imgCss" class="img-fluid" src="assets/img/css.png" alt="">
+              <br><br><br>
+              <hr style="width: 100%; height: 3px ; color: white;">
+            </div>
+            <!-- Replace With Example -->
+            <div id="divReplaceWith" style="display: none;" class="text-white-50">
+              <hr style="width: 100%; color: white;">
+              <h6 style="color: white;">
+                Permet de remplacer un élément avec un autre.
+              </h6>
+              <img id="imgCss" class="img-fluid" src="assets/img/replaceW.png" alt="">
+              <br><br>
+              <h6 style="color: white;">Exemple:</h6>
+              <br><br>
+              <button id="btnReplaceWith">Replace Text</button>
+              <br><br>
+              <p id="textReplaceWith" style="color: white;">Ce texte va être remplacé.</p>
+              <br><br><br>
+              <hr style="width: 100%; height: 3px ; color: white;">
+            </div>
+            <!-- Remove Example -->
+            <div id="divRemove" style="display: none;" class="text-white-50">
+              <hr style="width: 100%; color: white;">
+              <h6 style="color: white;">
+                Permet de supprimer un élément.
+              </h6>
+              <img id="imgCss" class="img-fluid" src="assets/img/remove.png" alt="">
+              <br><br>
+              <h6 style="color: white;">Exemple:</h6>
+              <br><br>
+              <button id="btnRemove">Remove Text</button>
+              <br><br>
+              <p id="textRemove" style="color: white;">Ce texte va être supprimé.</p>
+              <br><br><br>
+              <hr style="width: 100%; height: 3px ; color: white;">
+            </div>
+            <!-- After Example -->
+            <div id="divAfter" style="display: none;" class="text-white-50">
+              <hr style="width: 100%; color: white;">
+              <h6 style="color: white;">
+                Permet d'ajouter un élément après un autre.
+              </h6>
+              <img id="imgCss" class="img-fluid" src="assets/img/after.png" alt="">
+              <br><br>
+              <h6 style="color: white;">Exemple:</h6>
+              <br><br>
+              <button id="btnAfter">Add After Text</button>
+              <br><br>
+              <p id="textAfter" style="color: white;">Ce texte va être suivi d'un nouveau texte.</p>
+              <br><br><br>
+              <hr style="width: 100%; height: 3px ; color: white;">
+            </div>
+            <!-- Before Example -->
+            <div id="divBefore" style="display: none;" class="text-white-50">
+              <hr style="width: 100%; color: white;">
+              <h6 style="color: white;">
+                Permet d'ajouter un élément avant un autre.
+              </h6>
+              <img id="imgCss" class="img-fluid" src="assets/img/before.png" alt="">
+              <br><br>
+              <h6 style="color: white;">Exemple:</h6>
+              <br><br>
+              <button id="btnBefore">Add Before Text</button>
+              <br><br>
+              <p id="textBefore" style="color: white;">Ce texte va être précédé d'un nouveau texte.</p>
+              <br><br><br>
+              <hr style="width: 100%; height: 3px ; color: white;">
+            </div>
+            <!-- Prepend Example -->
+            <div id="divPrepend" style="display: none;" class="text-white-50">
+              <hr style="width: 100%; color: white;">
+              <h6 style="color: white;">
+                Permet d'ajouter un élément au début d'un autre.
+              </h6>
+              <img id="imgCss" class="img-fluid" src="assets/img/prepend.png" alt="">
+              <br><br>
+              <h6 style="color: white;">Exemple:</h6>
+              <br><br>
+              <button id="btnPrepend">Prepend Text</button>
+              <br><br>
+              <p id="textPrepend" style="color: white;">Texte original.</p>
+              <br><br><br>
+              <hr style="width: 100%; height: 3px ; color: white;">
+            </div>
+            <!-- Animate Example -->
+            <div id="divAnimate" style="display: none;" class="text-white-50">
+              <hr style="width: 100%; color: white;">
+              <h6 style="color: white;">
+                Permet d'animer un élément.
+              </h6>
+              <img id="imgCss" class="img-fluid" src="assets/img/animate.png" alt="">
+              <br><br>
+              <h6 style="color: white;">Exemple:</h6>
+              <br><br>
+              <button id="btnAnimate">Animate Text</button>
+              <br><br>
+              <p id="textAnimate" style="color: white;">Ce texte va être animé.</p>
+              <br><br><br>
+              <hr style="width: 100%; height: 3px ; color: white;">
+            </div>
+            <!-- Queue Example -->
+            <div id="divQueue" style="display: none;" class="text-white-50">
+              <hr style="width: 100%; color: white;">
+              <h6 style="color: white;">
+                Permet de gérer une file d'attente d'animations.
+              </h6>
+              <img id="imgCss" class="img-fluid" src="assets/img/queee.png" alt="">
+              <br><br>
+              <h6 style="color: white;">Exemple:</h6>
+              <br><br>
+              <button id="btnQueue">Queue Animations</button>
+              <br><br>
+              <p id="textQueue" style="color: white;">Ce texte va montrer les étapes de la file d'attente.</p>
+              <br><br><br>
+              <hr style="width: 100%; height: 3px ; color: white;">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact-->
+    <section class="contact-section bg-black">
+      <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5">
+          <div class="col-md-4 mb-3 mb-md-0">
+            <div class="card py-4 h-100">
+              <div class="card-body text-center">
+                <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+                <h4 class="text-uppercase m-0">Adresse</h4>
+                <hr class="my-4 mx-auto" />
+                <div class="small text-black-50">CF2M | 87-89 Avenue du Parc | 1060 St-Gilles</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3 mb-md-0">
+            <div class="card py-4 h-100">
+              <div class="card-body text-center">
+                <i class="fas fa-envelope text-primary mb-2"></i>
+                <h4 class="text-uppercase m-0">Email</h4>
+                <hr class="my-4 mx-auto" />
+                <div class="small text-black-50"><a href="#!">BailGuillaume@hotmail.com</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3 mb-md-0">
+            <div class="card py-4 h-100">
+              <div class="card-body text-center">
+                <i class="fas fa-mobile-alt text-primary mb-2"></i>
+                <h4 class="text-uppercase m-0">Téléphone</h4>
+                <hr class="my-4 mx-auto" />
+                <div class="small text-black-50">+32 2 555 55 55</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer-->
+    <footer class="footer bg-black small text-center text-white-50">
+      <div class="container px-4 px-lg-5">Copyright &copy;  Guillaume Baillieux 2024 & Ben Rami</div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
