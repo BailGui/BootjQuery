@@ -87,6 +87,12 @@
                     $("#divParent").toggle();
                     });
                 });
+
+                $(document).ready(function () {
+                        $("#btnHtml").click(function () {
+                    $("#divHtml").toggle();
+                    });
+                });
     </script>
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
@@ -519,25 +525,29 @@
     </script>
     </div>
 
-    <div id="divCss" style="display: none;">
+    <div id="divHtml" style="display: none;">
       <hr style="width: 100%; color: white;">
       <h6 style="color: white;">
-      Permet de modifier le css d'un élément.</h6>
+      Permet d'appeler un élément Html et son contenu.</h6>
       <br><br>
       <h6 style="color: white;">Exemple:</h6>
       <br><br>
-      <button id="changeColorButton">Change Color</button>
+      <button id="btnGetHtml">alert.html</button>
+      <button id="btnSetHtml">#content.html</button>
       <br><br>
-      <p id="text" style="color: white;">le background du texte va changer de couleur.</p>
-    
-      <img id="imgCss" class="img-fluid" src="assets/img/css.png" alt="">
+      <div id="content" style="color: white;">Ceci est un contenu initial</div>
+      <br><br>
+      <img id="imgCss" class="img-fluid" src="assets/img/html.png" alt="">
       <br><br><br>
       <hr style="width: 100%; height: 3px ; color: white;">
     
       <script>
         $(document).ready(function () {
-          $("#changeColorButton").click(function () {
-            $("#text").css("background-color", "red");
+          $("#btnGetHtml").click(function () {
+            alert($("#content").html());
+          });
+          $("#btnSetHtml").click(function () {
+            $("#content").html("<p>Nouveau contenu</p>");
           });
         });
       </script>
