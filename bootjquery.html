@@ -57,6 +57,18 @@
                     $("#divToggle").toggle();
                     });
                 });
+
+                $(document).ready(function () {
+                        $("#btnSup").click(function () {
+                    $("#divSup").toggle();
+                    });
+                });
+
+                $(document).ready(function () {
+                        $("#btnSdown").click(function () {
+                    $("#divSdown").toggle();
+                    });
+                });
     </script>
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
@@ -89,12 +101,13 @@
     <!-- Masthead-->
     <header class="masthead">
       <div
-        class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center"
+        class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center" 
       >
         <div class="d-flex justify-content-center">
           <div class="text-center">
             <h1 id="nom" class="mx-auto my-0 text-uppercase"></h1>
             <h2 id="job" class="text-white-50 mx-auto mt-2 mb-5"></h2>
+            <br><br><br><br><br><br><br><br>
             <a id="clickHere" class="btn btn-primary" href="#about"
               >Cliquez ici</a
             >
@@ -145,7 +158,7 @@
               .slideUp</button
             ><span class="text-white">|</span
             ><button
-              id="btn"
+              id="btnSup"
               class="text-white"
               style="border: none; background-color: black"
             >
@@ -153,7 +166,7 @@
             </button>
             <span class="text-white">|</span>
             <button
-              id="btn"
+              id="btnSdown"
               class="text-white"
               style="border: none; background-color: black"
             >
@@ -300,7 +313,6 @@
                     });
                   });
                 </script>
-            </p>
 
             </div>
                      <div id="divHide" style="display: none;" class="text-white-50">
@@ -364,6 +376,50 @@
                           });
                         </script>
                     </div>
+
+                    <div id="divSup" style="display: none;" class="text-white-50">
+                      <hr style="width: 100%; color: white;">
+                      <p id="textSlideUp" style="color: white;">
+                      Permet de cacher un élément avec une animation. 
+                      <br><br>
+                      Exemple:
+                      <br><br>
+                      <button id="animateSlideUpButton">Animate Hide Up</button>
+                        <p id="text">Ce texte va être masqué vers le haut avec une animation.</p>
+                        <img id="imgCss" class="img-fluid" src="assets/img/toggle.png" alt="">
+                        <br><br><br>
+                        <hr style="width: 100%; height: 3px ; color: white;">
+                          <script>
+                            $(document).ready(function () {
+                            $("#animateSlideUpButton").click(function () {
+                                $("#textSlideUp").slideUp();
+                               });
+                            });
+                          </script>
+                    </div>
+                    
+                <div id="divSdown" style="display: none;" class="text-white-50">
+                  <p class="text-white-50 pt-5">
+                      Permet de faire apparaître et disparaitre un élément. 
+                      <br><br>
+                      Exemple:
+                      <br><br>
+                      <button id="Sdownbtn">slideDown</button>
+                      <p id="textSdown" style="color: white;">Ce texte va être masqué/affiché.</p>
+                      <img id="imgCss" class="img-fluid" src="assets/img/toggle.png" alt="">
+                      <br><br><br>
+                      <hr style="width: 100%; height: 3px ; color: white;">
+                      
+                      <script>
+                        
+                        $(document).ready(function () {
+                          
+                             $("#Sdownbtn").click(function() {
+                            $("#textSdown").slideDown();
+                          });
+                        });
+    </script>
+                  </div>
     <br /><br />
     <br /><br />
           </div>
