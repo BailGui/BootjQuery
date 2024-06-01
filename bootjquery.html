@@ -65,8 +65,8 @@
                 });
 
                 $(document).ready(function () {
-                        $("#btnSdown").click(function () {
-                    $("#divSdown").toggle();
+                        $("#btnStoggle").click(function () {
+                    $("#divStoggle").toggle();
                     });
                 });
     </script>
@@ -151,14 +151,14 @@
               .toggle</button
             ><span class="text-white">|</span
             ><button
-              id="btnToggle"
+              id="btnSup"
               class="text-white"
               style="border: none; background-color: black"
             >
               .slideUp</button
             ><span class="text-white">|</span
             ><button
-              id="btnSup"
+              id="btnSdown"
               class="text-white"
               style="border: none; background-color: black"
             >
@@ -166,21 +166,21 @@
             </button>
             <span class="text-white">|</span>
             <button
-              id="btnSdown"
+              id="btnStoggle"
               class="text-white"
               style="border: none; background-color: black"
             >
               .slideToggle</button
             ><span class="text-white">|</span
             ><button
-              id="btn"
+              id="btnNext"
               class="text-white"
               style="border: none; background-color: black"
             >
               .next</button
             ><span class="text-white">|</span
             ><button
-              id="btn"
+              id="btnParent"
               class="text-white"
               style="border: none; background-color: black"
             >
@@ -188,21 +188,21 @@
             </button>
             <span class="text-white">|</span>
             <button
-              id="btn"
+              id="btnHtml"
               class="text-white"
               style="border: none; background-color: black"
             >
               .html</button
             ><span class="text-white">|</span
             ><button
-              id="btn"
+              id="btnFin"
               class="text-white"
               style="border: none; background-color: black"
             >
               .fadeIn</button
             ><span class="text-white">|</span
             ><button
-              id="btn"
+              id="btnFout"
               class="text-white"
               style="border: none; background-color: black"
             >
@@ -210,21 +210,21 @@
             </button>
             <span class="text-white">|</span>
             <button
-              id="btn"
+              id="btnFtoggle"
               class="text-white"
               style="border: none; background-color: black"
             >
               .fadeToggle</button
             ><span class="text-white">|</span
             ><button
-              id="btn"
+              id="btnFto"
               class="text-white"
               style="border: none; background-color: black"
             >
               .fadeTo</button
             ><span class="text-white">|</span
             ><button
-              id="btn"
+              id="btnText"
               class="text-white"
               style="border: none; background-color: black"
             >
@@ -232,21 +232,21 @@
             </button>
             <span class="text-white">|</span>
             <button
-              id="btn"
+              id="btnRwith"
               class="text-white"
               style="border: none; background-color: black"
             >
               .replaceWith</button
             ><span class="text-white">|</span
             ><button
-              id="btn"
+              id="btnRemove"
               class="text-white"
               style="border: none; background-color: black"
             >
               .remove</button
             ><span class="text-white">|</span
             ><button
-              id="btn"
+              id="btnAfter"
               class="text-white"
               style="border: none; background-color: black"
             >
@@ -254,21 +254,21 @@
             </button>
             <span class="text-white">|</span>
             <button
-              id="btn"
+              id="btnBefore"
               class="text-white"
               style="border: none; background-color: black"
             >
               .before</button
             ><span class="text-white">|</span
             ><button
-              id="btn"
+              id="btnPrepend"
               class="text-white"
               style="border: none; background-color: black"
             >
               .prepend</button
             ><span class="text-white">|</span>
             <button
-              id="btn"
+              id="btnAnimate"
               class="text-white"
               style="border: none; background-color: black"
             >
@@ -276,14 +276,14 @@
             </button>
             <span class="text-white">|</span>
             <button
-              id="btn"
+              id="btnQueue"
               class="text-white"
               style="border: none; background-color: black"
             >
               .queue</button
             ><span class="text-white">|</span
             ><button
-              id="btn"
+              id="btnDequeue"
               class="text-white"
               style="border: none; background-color: black"
             >
@@ -426,25 +426,26 @@
                       </script>
                 </div>
 
-                <div id="divCss" style="display: none;">
+                <div id="divStoggle" style="display: none;">
                   <hr style="width: 100%; color: white;">
                   <h6 style="color: white;">
-                  Permet de modifier le css d'un élément.</h6>
+                  Permet d'afficher/masquer un élément avec une animation.</h6>
                   <br><br>
                   <h6 style="color: white;">Exemple:</h6>
                   <br><br>
-                  <button id="changeColorButton">Change Color</button>
+                  <button id="btnSlideToggle">.slideToggle</button>
                   <br><br>
-                  <p id="text" style="color: white;">le background du texte va changer de couleur.</p>
+                  <div id="panel" style="display: none">Contenu à glisser</div>
   
-                  <img id="imgCss" class="img-fluid" src="assets/img/css.png" alt="">
+                  <img id="imgStoggle" class="img-fluid" src="assets/img/stoggle.png" alt="">
                   <br><br><br>
                   <hr style="width: 100%; height: 3px ; color: white;">
-              
+                  <br><br><br>
                   <script>
                     $(document).ready(function () {
-                      $("#changeColorButton").click(function () {
-                        $("#text").css("background-color", "red");
+                      $("#panel").hide();
+                      $("#btnSlideToggle").click(function () {
+                        $("#panel").slideToggle();
                       });
                     });
                   </script>
