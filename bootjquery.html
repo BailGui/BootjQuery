@@ -294,12 +294,13 @@
             <br />
             <div id="divCss" style="display: none;">
                 <hr style="width: 100%; color: white;">
-                <p id="textCss" class="text-white-50 pt-5">
-                Permet de modifier le css d'un élément. 
+                <h6 style="color: white;">
+                Permet de modifier le css d'un élément.</h6>
                 <br><br>
-                Exemple:
+                <h6 style="color: white;">Exemple:</h6>
                 <br><br>
                 <button id="changeColorButton">Change Color</button>
+                <br><br>
                 <p id="text" style="color: white;">le background du texte va changer de couleur.</p>
 
                 <img id="imgCss" class="img-fluid" src="assets/img/css.png" alt="">
@@ -316,13 +317,13 @@
 
             </div>
                      <div id="divHide" style="display: none;" class="text-white-50">
-                        <p class="text-white-50">
-                            Permet de faire disparaitre un élément. 
+                        <h6 style="color: white;">
+                            Permet de faire disparaitre un élément.</h6> 
                             <br><br>
-                            Exemple:
+                            <h6 style="color: white;">Exemple:</h6>
                             <br><br>
                             <button id="hideButton">Hide</button>
-                            <br>
+                            <br><br>
                             <p id="textHide" style="color: white;">Ce texte va disparaitre.</p>
                             <img id="imgCss" class="img-fluid" src="assets/img/hide.png" alt="">
                             <br><br><br>
@@ -338,12 +339,13 @@
             </div>
             
             <div id="divShow" style="display: none;" class="text-white-50">
-                <p class="text-white-50 pt-5">
-                    Permet de faire apparaître un élément. 
+              <h6 style="color: white;">
+                    Permet de faire apparaître un élément.</h6>
                     <br><br>
-                    Exemple:
-                    <br><br>
+                    <h6 style="color: white;">Exemple:</h6>
+                    <br><br> 
                     <button id="showButton">Show</button>
+                    <br><br>
                     <p id="textShow" style="display: none; color: white;">Ce texte va être affiché.</p>
                     <img id="imgCss" class="img-fluid" src="assets/img/show.png" alt="">
                     <br><br><br>
@@ -358,12 +360,13 @@
                 </div>
 
                 <div id="divToggle" style="display: none;" class="text-white-50">
-                    <p class="text-white-50 pt-5">
-                        Permet de faire apparaître et disparaitre un élément. 
+                  <h6 style="color: white;">
+                        Permet de faire apparaître et disparaitre un élément.</h6> 
                         <br><br>
-                        Exemple:
+                        <h6 style="color: white;">Exemple:</h6>
                         <br><br>
                         <button id="toggleButton">Toggle</button>
+                        <br><br>
                         <p id="textToggle" style="color: white;">Ce texte va être masqué/affiché.</p>
                         <img id="imgCss" class="img-fluid" src="assets/img/toggle.png" alt="">
                         <br><br><br>
@@ -379,12 +382,13 @@
 
                     <div id="divSup" style="display: none;" class="text-white-50">
                       <hr style="width: 100%; color: white;">
-                      <p id="textSlideUp" style="color: white;">
-                      Permet de cacher un élément avec une animation. 
+                      <h6 style="color: white;">
+                      Permet de cacher un élément avec une animation.</h6>
                       <br><br>
-                      Exemple:
+                      <h6 style="color: white;">Exemple:</h6>
                       <br><br>
                       <button id="animateSlideUpButton">Animate Hide Up</button>
+                      <br><br>
                         <p id="text">Ce texte va être masqué vers le haut avec une animation.</p>
                         <img id="imgCss" class="img-fluid" src="assets/img/toggle.png" alt="">
                         <br><br><br>
@@ -399,12 +403,13 @@
                     </div>
                     
                 <div id="divSdown" style="display: none;" class="text-white-50">
-                  <p class="text-white-50 pt-5">
-                      Permet de faire apparaître et disparaitre un élément. 
+                  <h6 style="color: white;">
+                      Permet de faire apparaître et disparaitre un élément.</h6>
                       <br><br>
-                      Exemple:
+                      <h6 style="color: white;">Exemple:</h6>
                       <br><br>
                       <button id="Sdownbtn">slideDown</button>
+                      <br><br>
                       <p id="textSdown" style="color: white;">Ce texte va être masqué/affiché.</p>
                       <img id="imgCss" class="img-fluid" src="assets/img/toggle.png" alt="">
                       <br><br><br>
@@ -413,7 +418,7 @@
                       <script>
                         
                         $(document).ready(function () {
-                          
+                          $("#textSdown").hide(); 
                              $("#Sdownbtn").click(function() {
                             $("#textSdown").slideDown();
                           });
