@@ -111,6 +111,14 @@
                     $("#divFtoggle").toggle();
                     });
                 });
+
+                $(document).ready(function () {
+                        $("#btnFto").click(function () {
+                    $("#divFadeTo").toggle();
+                    });
+                });
+
+                
     </script>
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
@@ -658,31 +666,36 @@
             </script>
             </div>
 
-            <div id="divCss" style="display: none;">
+            <div id="divFadeTo" style="display: none;">
               <hr style="width: 100%; color: white;">
               <h6 style="color: white;">
-              Permet de modifier le css d'un élément.</h6>
+              Permet d'afficher un élément avec une animation de fondu et change son opacité.</h6>
               <br><br>
               <h6 style="color: white;">Exemple:</h6>
               <br><br>
-              <button id="changeColorButton">Change Color</button>
+              <button id="btnFadeToImg">.fadeTo</button>
               <br><br>
-              <p id="text" style="color: white;">le background du texte va changer de couleur.</p>
-            
-              <img id="imgCss" class="img-fluid" src="assets/img/css.png" alt="">
+              <img
+              id="imgFadeTo"
+              src="assets/img/classic-cammy-4k-wallpapers-v0-5vkntlnpih3b1.jpg"
+              style="width: 45%; height: 45%"
+              />
+              <br><br><br>
+              <img id="imgCss" class="img-fluid" src="assets/img/fadeTo.png" alt="">
               <br><br><br>
               <hr style="width: 100%; height: 3px ; color: white;">
             
               <script>
                 $(document).ready(function () {
-                  $("#changeColorButton").click(function () {
-                    $("#text").css("background-color", "red");
+                  $("#imgFadeTo").hide();
+                  $("#btnFadeToImg").click(function () {
+                    $("#imgFadeTo").fadeTo(5000, 0.3);
                   });
                 });
               </script>
               </div>
 
-              <div id="divCss" style="display: none;">
+              <div id="divText" style="display: none;">
                 <hr style="width: 100%; color: white;">
                 <h6 style="color: white;">
                 Permet de modifier le css d'un élément.</h6>
@@ -699,8 +712,8 @@
               
                 <script>
                   $(document).ready(function () {
-                    $("#changeColorButton").click(function () {
-                      $("#text").css("background-color", "red");
+                    $("#btn").click(function () {
+                      $(".para").text("blablabla");
                     });
                   });
                 </script>
