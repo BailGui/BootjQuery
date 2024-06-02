@@ -118,6 +118,12 @@
                     });
                 });
 
+                $(document).ready(function () {
+                        $("#btnText").click(function () {
+                    $("#divText").toggle();
+                    });
+                });
+
                 
     </script>
     <!-- Navigation-->
@@ -698,22 +704,26 @@
               <div id="divText" style="display: none;">
                 <hr style="width: 100%; color: white;">
                 <h6 style="color: white;">
-                Permet de modifier le css d'un élément.</h6>
+                Permet de modifier le contenu texte d'un élément.</h6>
                 <br><br>
                 <h6 style="color: white;">Exemple:</h6>
                 <br><br>
-                <button id="changeColorButton">Change Color</button>
+                <button id="btnTextDiv">.text</button>
                 <br><br>
-                <p id="text" style="color: white;">le background du texte va changer de couleur.</p>
-              
-                <img id="imgCss" class="img-fluid" src="assets/img/css.png" alt="">
+                <div class="para" style="color: white;">pioupioupiou</div>
+                <div class="para" style="color: white;">pioupioupiou</div>
+                <div class="para" style="color: white;">pioupioupiou</div>
+                <div class="para" style="color: white;">pioupioupiou</div>
+                <div class="para" style="color: white;">pioupioupiou</div>
+                <br><br><br>
+                <img id="imgCss" class="img-fluid" src="assets/img/text.png" alt="">
                 <br><br><br>
                 <hr style="width: 100%; height: 3px ; color: white;">
               
                 <script>
                   $(document).ready(function () {
-                    $("#btn").click(function () {
-                      $(".para").text("blablabla");
+                    $("#btnTextDiv").click(function () {
+                      $(".para").text("panpanpan");
                     });
                   });
                 </script>
