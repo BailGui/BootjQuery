@@ -136,12 +136,44 @@
                     });
                 });
 
+                $(document).ready(function () {
+                        $("#btnAfter").click(function () {
+                    $("#divAfter").toggle();
+                    });
+                });
+
+                
+                $(document).ready(function () {
+                        $("#btnBefore").click(function () {
+                    $("#divBefore").toggle();
+                    });
+                });
+
+                $(document).ready(function () {
+                        $("#btnPrepend").click(function () {
+                    $("#divPrepend").toggle();
+                    });
+                });
+
+                $(document).ready(function () {
+                        $("#btnAnimate").click(function () {
+                    $("#divAnimate").toggle();
+                    });
+                });
+
+                $(document).ready(function () {
+                        $("#btnQueue").click(function () {
+                    $("#divQueue").toggle();
+                    });
+                });
+
+
                 
     </script>
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div class="container px-4 px-lg-5">
-        <a id="logo" class="navbar-brand" href="#page-top">jQueryLibrary.</a>
+        <a id="logo" class="navbar-brand" href="#page-top"><img src="assets/img/logo.png" alt=".jQueryLibrary"></a>
         <button
           class="navbar-toggler navbar-toggler-right"
           type="button"
@@ -188,7 +220,7 @@
       <div class="container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
           <div class="col-lg-8">
-            <h2 id="titlePres" class="text-white mb-4">Méthodes.</h2>
+            <h2 id="titlePres" class="text-white m-5">Méthodes.</h2>
             <button
               id="btnCss"
               class="text-white"
@@ -348,15 +380,9 @@
               class="text-white"
               style="border: none; background-color: black"
             >
-              .queue</button
-            ><span class="text-white">|</span
-            ><button
-              id="btnDequeue"
-              class="text-white"
-              style="border: none; background-color: black"
+              .queue &.dequeue</button
             >
-              .dequeue</button
-            ><span class="text-white">|</span>
+             
 
             <br />
             <br />
@@ -385,6 +411,7 @@
 
             </div>
                      <div id="divHide" style="display: none;" class="text-white-50">
+                      <hr style="width: 100%; color: white;">
                         <h6 style="color: white;">
                             Permet de faire disparaitre un élément.</h6> 
                             <br><br>
@@ -407,6 +434,7 @@
             </div>
             
             <div id="divShow" style="display: none;" class="text-white-50">
+              <hr style="width: 100%; color: white;">
               <h6 style="color: white;">
                     Permet de faire apparaître un élément.</h6>
                     <br><br>
@@ -428,6 +456,7 @@
                 </div>
 
                 <div id="divToggle" style="display: none;" class="text-white-50">
+                  <hr style="width: 100%; color: white;">
                   <h6 style="color: white;">
                         Permet de faire apparaître et disparaitre un élément.</h6> 
                         <br><br>
@@ -763,7 +792,7 @@
                   <script>
                     $(document).ready(function () {
                       $("#btnreplaceWithdiv").click(function () {
-                        $(".para").replaceWith("<h4 style='color: white;''>blablabla</h4>");
+                        $(".para").replaceWith("<h4 style='color: white;'>blablabla</h4>");
                       });
                     });
                   </script>
@@ -787,7 +816,7 @@
                       <li class="supprimer" style="color: white; list-style: lower-alpha;">pioupioupiou</li>
                   </ul>
                   
-                    <img id="imgCss" class="img-fluid" src="assets/img/remove.png" alt="">
+                    <img id="imgRemove" class="img-fluid" src="assets/img/remove.png" alt="">
                     <br><br><br>
                     <hr style="width: 100%; height: 3px ; color: white;">
                   
@@ -800,122 +829,152 @@
                     </script>
                     </div>
 
-                    <div id="divCss" style="display: none;">
+                    <div id="divAfter" style="display: none;">
                       <hr style="width: 100%; color: white;">
                       <h6 style="color: white;">
-                      Permet de modifier le css d'un élément.</h6>
+                      Permet d'ajouter un ou plusieurs éléments après un autre élément. </h6>
                       <br><br>
                       <h6 style="color: white;">Exemple:</h6>
                       <br><br>
-                      <button id="changeColorButton">Change Color</button>
+                      <button id="btnAfterDiv">.after</button>
                       <br><br>
-                      <p id="text" style="color: white;">le background du texte va changer de couleur.</p>
-                    
-                      <img id="imgCss" class="img-fluid" src="assets/img/css.png" alt="">
+                      <ul>
+                        <li class="supprimer" style="color: white; list-style: lower-alpha;">pioupioupiou</li>
+                        <li class="supprimer" style="color: white; list-style: lower-alpha;">pioupioupiou</li>
+                        <li class="supprimer" style="color: white; list-style: lower-alpha;">pioupioupiou</li>
+                        <li class="supprimer" style="color: white; list-style: lower-alpha;">pioupioupiou</li>
+                        <li class="supprimer" style="color: white; list-style: lower-alpha;">pioupioupiou</li>
+                        <li class="supprimer" style="color: white; list-style: lower-alpha;">pioupioupiou</li>
+                    </ul>
+                    <br><br><br>
+                      <img id="imgAfter" class="img-fluid" src="assets/img/after.png" alt="">
                       <br><br><br>
                       <hr style="width: 100%; height: 3px ; color: white;">
                     
                       <script>
                         $(document).ready(function () {
-                          $("#changeColorButton").click(function () {
-                            $("#text").css("background-color", "red");
+                          $("#btnAfterDiv").click(function () {
+                            $(".supprimer").after("<h4 style='color: white;'>blablabla</h4>");
                           });
                         });
                       </script>
                       </div>
 
-                      <div id="divCss" style="display: none;">
+                      <div id="divBefore" style="display: none;">
                         <hr style="width: 100%; color: white;">
-                        <h6 style="color: white;">
-                        Permet de modifier le css d'un élément.</h6>
+                        
+                      <h6 style="color: white;">
+                        Permet d'ajouter un ou plusieurs éléments avant un autre élément. </h6>
                         <br><br>
                         <h6 style="color: white;">Exemple:</h6>
                         <br><br>
-                        <button id="changeColorButton">Change Color</button>
+                        <button id="btnBeforeDiv">.before</button>
                         <br><br>
-                        <p id="text" style="color: white;">le background du texte va changer de couleur.</p>
+                        <ul>
+                          <li class="supprimer" style="color: white; list-style: lower-alpha;">pioupioupiou</li>
+                          <li class="supprimer" style="color: white; list-style: lower-alpha;">pioupioupiou</li>
+                          <li class="supprimer" style="color: white; list-style: lower-alpha;">pioupioupiou</li>
+                          <li class="supprimer" style="color: white; list-style: lower-alpha;">pioupioupiou</li>
+                          <li class="supprimer" style="color: white; list-style: lower-alpha;">pioupioupiou</li>
+                          <li class="supprimer" style="color: white; list-style: lower-alpha;">pioupioupiou</li>
+                      </ul>
+                      <br><br><br>
                       
-                        <img id="imgCss" class="img-fluid" src="assets/img/css.png" alt="">
+                        <img id="imgBefore" class="img-fluid" src="assets/img/before.png" alt="">
                         <br><br><br>
                         <hr style="width: 100%; height: 3px ; color: white;">
                       
                         <script>
                           $(document).ready(function () {
-                            $("#changeColorButton").click(function () {
-                              $("#text").css("background-color", "red");
+                            $("#btnBeforeDiv").click(function () {
+                              $(".supprimer").before("<h4 style='color: white;'>blablabla</h4>");
                             });
                           });
                         </script>
                         </div>
+                        
 
-                        <div id="divCss" style="display: none;">
+                        <div id="divPrepend" style="display: none;">
                           <hr style="width: 100%; color: white;">
+                        
                           <h6 style="color: white;">
-                          Permet de modifier le css d'un élément.</h6>
-                          <br><br>
-                          <h6 style="color: white;">Exemple:</h6>
-                          <br><br>
-                          <button id="changeColorButton">Change Color</button>
-                          <br><br>
-                          <p id="text" style="color: white;">le background du texte va changer de couleur.</p>
-                        
-                          <img id="imgCss" class="img-fluid" src="assets/img/css.png" alt="">
-                          <br><br><br>
-                          <hr style="width: 100%; height: 3px ; color: white;">
-                        
-                          <script>
-                            $(document).ready(function () {
-                              $("#changeColorButton").click(function () {
-                                $("#text").css("background-color", "red");
-                              });
-                            });
-                          </script>
-                          </div>
-
-                          <div id="divCss" style="display: none;">
-                            <hr style="width: 100%; color: white;">
-                            <h6 style="color: white;">
-                            Permet de modifier le css d'un élément.</h6>
+                            Permet d'ajouter un élément derrière un autre élément. </h6>
                             <br><br>
                             <h6 style="color: white;">Exemple:</h6>
                             <br><br>
-                            <button id="changeColorButton">Change Color</button>
+                            <button id="btnPrependDiv">.prepend</button>
                             <br><br>
-                            <p id="text" style="color: white;">le background du texte va changer de couleur.</p>
+                            
+                              <div class="piou" style="color: white;">pioupioupiou</div>
+                        
+                          <br><br><br>
                           
-                            <img id="imgCss" class="img-fluid" src="assets/img/css.png" alt="">
+                            <img id="imgBefore" class="img-fluid" src="assets/img/prepend.png" alt="">
                             <br><br><br>
                             <hr style="width: 100%; height: 3px ; color: white;">
                           
                             <script>
                               $(document).ready(function () {
-                                $("#changeColorButton").click(function () {
-                                  $("#text").css("background-color", "red");
+                                $("#btnPrependDiv").click(function () {
+                                  $(".piou").prepend("<span style='color: white;'> blablabla </span>");
+                                });
+                              });
+                            </script>
+                          </div>
+                        
+
+                          <div id="divAnimate" style="display: none;">
+                            <hr style="width: 100%; color: white;">
+                            <h6 style="color: white;">
+                            Permet d'animer un ou plusieurs éléments avec des paramètres CSS et une durée.</h6>
+                            <br><br>
+                            <h6 style="color: white;">Exemple:</h6>
+                            <br><br>
+                            <button id="btnAnimateH1">.animate</button>
+                            <br><br>
+                            <p style=" background-color: red">
+                              Cours jQuery
+                            </p>
+                          
+                            <img id="imgCss" class="img-fluid" src="assets/img/animate.png" alt="">
+                            <br><br><br>
+                            <hr style="width: 100%; height: 3px ; color: white;">
+                          
+                            <script>
+                              $(document).ready(function () {
+                                $("#btnAnimateH1").click(function () {
+                                  $("p").animate({ width: "300px" }, 2000);
                                 });
                               });
                             </script>
                             </div>
+                          
 
-                            <div id="divCss" style="display: none;">
+                            <div id="divQueue" style="display: none;">
                               <hr style="width: 100%; color: white;">
                               <h6 style="color: white;">
-                              Permet de modifier le css d'un élément.</h6>
+                                Permet de gérer une file d'attente d'animations.
+                              </h6>
                               <br><br>
                               <h6 style="color: white;">Exemple:</h6>
                               <br><br>
-                              <button id="changeColorButton">Change Color</button>
+                              <button id="btnQueueP">.queue</button>
                               <br><br>
-                              <p id="text" style="color: white;">le background du texte va changer de couleur.</p>
+                              <p id="textQueue" style="color: white;">Ce texte va montrer les étapes de la file d'attente.</p>
                             
-                              <img id="imgCss" class="img-fluid" src="assets/img/css.png" alt="">
+                              <img id="imgCss" class="img-fluid" src="assets/img/queue.png" alt="">
                               <br><br><br>
                               <hr style="width: 100%; height: 3px ; color: white;">
                             
                               <script>
-                                $(document).ready(function () {
-                                  $("#changeColorButton").click(function () {
-                                    $("#text").css("background-color", "red");
-                                  });
+                                $("#btnQueueP").click(function () {
+                                $("#textQueue").queue(function (next) {
+                                $(this).text("Étape 1");
+                                next();
+                                }).queue(function (next) {
+                                $(this).text("Étape 2");
+                                next();
+                                }).dequeue();
                                 });
                               </script>
                               </div>
@@ -923,16 +982,28 @@
               
     <br /><br />
     <br /><br />
+    <h1 class="m-5">More soon...</h1>
           </div>
         </div>
       </div>
       <!-- <img id="ipad" src="assets/img/ipad.png" alt=""> -->
     </section>
     <!-- Contact-->
+    <section class="signup-section" id="signup">
+      <div class="container px-0 px-lg-5">
+        <div class="row gx-2 gx-lg-3">
+          <div class="col-md-10 col-lg-8 mx-auto text-center">
+            <i class="far fa-paper-plane fa-2x mb-0 text-white"></i>
+            <h2 class="text-white mb-0">Contact</h2>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact-->
     <section class="contact-section bg-black">
       <div class="container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5">
-          <div class="col-md-4 mb-3 mb-md-0">
+         <div class="col-md-4 mb-3 mb-md-0">
             <div class="card py-4 h-100">
               <div class="card-body text-center">
                 <i class="fas fa-map-marked-alt text-primary mb-2"></i>
@@ -970,9 +1041,7 @@
         <div class="social d-flex justify-content-center">
           <!-- <a class="mx-2" href="#!"><i class="fab fa-twitter"></i></a>
           <a class="mx-2" href="#!"><i class="fab fa-facebook-f"></i></a> -->
-          <a class="mx-2" href="https://github.com/BailGui"
-            ><i class="fab fa-github"></i
-          ></a>
+          <a class="mx-2" href="https://github.com/BailGui"><i class="fab fa-github"></i></a>
         </div>
       </div>
     </section>
@@ -982,11 +1051,14 @@
         Copyright &copy; Guillaume Baillieux 2024
       </div>
     </footer>
-
+    <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-
+    <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
-
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <!-- * *                               SB Forms JS                               * *-->
+    <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
     <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
   </body>
 </html>
