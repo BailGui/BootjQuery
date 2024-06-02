@@ -130,6 +130,12 @@
                     });
                 });
 
+                $(document).ready(function () {
+                        $("#btnRemove").click(function () {
+                    $("#divRemove").toggle();
+                    });
+                });
+
                 
     </script>
     <!-- Navigation-->
@@ -738,7 +744,7 @@
                 <div id="divReplaceWith" style="display: none;">
                   <hr style="width: 100%; color: white;">
                   <h6 style="color: white;">
-                  Permet de remplacer un élément avec un autre élément différent.</h6>
+                  Permet de remplacer un ou plusieurs éléments avec un autre élément différent.</h6>
                   <br><br>
                   <h6 style="color: white;">Exemple:</h6>
                   <br><br>
@@ -763,25 +769,32 @@
                   </script>
                   </div>
 
-                  <div id="divCss" style="display: none;">
+                  <div id="divRemove" style="display: none;">
                     <hr style="width: 100%; color: white;">
                     <h6 style="color: white;">
-                    Permet de modifier le css d'un élément.</h6>
+                    Permet de supprimer un ou plusieurs éléments.</h6>
                     <br><br>
                     <h6 style="color: white;">Exemple:</h6>
                     <br><br>
-                    <button id="changeColorButton">Change Color</button>
+                    <button id="btnRemoveLi">.remove</button>
                     <br><br>
-                    <p id="text" style="color: white;">le background du texte va changer de couleur.</p>
+                    <ul>
+                      <li class="supprimer" style="color: white; list-style: lower-alpha;">pioupioupiou</li>
+                      <li class="supprimer" style="color: white; list-style: lower-alpha;">pioupioupiou</li>
+                      <li class="supprimer" style="color: white; list-style: lower-alpha;">pioupioupiou</li>
+                      <li class="supprimer" style="color: white; list-style: lower-alpha;">pioupioupiou</li>
+                      <li class="supprimer" style="color: white; list-style: lower-alpha;">pioupioupiou</li>
+                      <li class="supprimer" style="color: white; list-style: lower-alpha;">pioupioupiou</li>
+                  </ul>
                   
-                    <img id="imgCss" class="img-fluid" src="assets/img/css.png" alt="">
+                    <img id="imgCss" class="img-fluid" src="assets/img/remove.png" alt="">
                     <br><br><br>
                     <hr style="width: 100%; height: 3px ; color: white;">
                   
                     <script>
                       $(document).ready(function () {
-                        $("#changeColorButton").click(function () {
-                          $("#text").css("background-color", "red");
+                        $("#btnRemoveLi").click(function () {
+                          $(".supprimer").remove();
                         });
                       });
                     </script>
