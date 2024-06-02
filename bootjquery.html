@@ -124,6 +124,12 @@
                     });
                 });
 
+                $(document).ready(function () {
+                        $("#btnRwith").click(function () {
+                    $("#divReplaceWith").toggle();
+                    });
+                });
+
                 
     </script>
     <!-- Navigation-->
@@ -729,25 +735,29 @@
                 </script>
                 </div>
 
-                <div id="divCss" style="display: none;">
+                <div id="divReplaceWith" style="display: none;">
                   <hr style="width: 100%; color: white;">
                   <h6 style="color: white;">
-                  Permet de modifier le css d'un élément.</h6>
+                  Permet de remplacer un élément avec un autre élément différent.</h6>
                   <br><br>
                   <h6 style="color: white;">Exemple:</h6>
                   <br><br>
-                  <button id="changeColorButton">Change Color</button>
+                  <button id="btnreplaceWithdiv">.replaceWith</button>
                   <br><br>
-                  <p id="text" style="color: white;">le background du texte va changer de couleur.</p>
-                
-                  <img id="imgCss" class="img-fluid" src="assets/img/css.png" alt="">
+                  <div class="para" style="color: white;">pioupioupiou</div>
+                  <div class="para" style="color: white;">pioupioupiou</div>
+                  <div class="para" style="color: white;">pioupioupiou</div>
+                  <div class="para" style="color: white;">pioupioupiou</div>
+                  <div class="para" style="color: white;">pioupioupiou</div>              
+                  <br><br><br>
+                  <img id="imgCss" class="img-fluid" src="assets/img/replaceWith.png" alt="">
                   <br><br><br>
                   <hr style="width: 100%; height: 3px ; color: white;">
                 
                   <script>
                     $(document).ready(function () {
-                      $("#changeColorButton").click(function () {
-                        $("#text").css("background-color", "red");
+                      $("#btnreplaceWithdiv").click(function () {
+                        $(".para").replaceWith("<h4 style='color: white;''>blablabla</h4>");
                       });
                     });
                   </script>
