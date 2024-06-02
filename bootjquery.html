@@ -583,7 +583,7 @@
     <br><br>
     <button id="btnParentDiv">.parent</button>
     <br><br>
-    <p style="color: white;">Ce paragraphe est à l'intérieur d'un div</p>
+    <p class="bro" style="color: white;">Ce paragraphe est à l'intérieur d'un div</p>
   
     <img id="imgCss" class="img-fluid" src="assets/img/parent.png" alt="">
     <br><br><br>
@@ -592,7 +592,7 @@
     <script>
       $(document).ready(function () {
         $("#btnParentDiv").click(function () {
-          $("p").parent().css("background-color", "red");
+          $(".bro").parent().css("background-color", "red");
         });
       });
     </script>
@@ -779,11 +779,11 @@
                   <br><br>
                   <button id="btnreplaceWithdiv">.replaceWith</button>
                   <br><br>
-                  <div class="para" style="color: white;">pioupioupiou</div>
-                  <div class="para" style="color: white;">pioupioupiou</div>
-                  <div class="para" style="color: white;">pioupioupiou</div>
-                  <div class="para" style="color: white;">pioupioupiou</div>
-                  <div class="para" style="color: white;">pioupioupiou</div>              
+                  <div class="parag" style="color: white;">pioupioupiou</div>
+                  <div class="parag" style="color: white;">pioupioupiou</div>
+                  <div class="parag" style="color: white;">pioupioupiou</div>
+                  <div class="parag" style="color: white;">pioupioupiou</div>
+                  <div class="parag" style="color: white;">pioupioupiou</div>              
                   <br><br><br>
                   <img id="imgCss" class="img-fluid" src="assets/img/replaceWith.png" alt="">
                   <br><br><br>
@@ -792,7 +792,7 @@
                   <script>
                     $(document).ready(function () {
                       $("#btnreplaceWithdiv").click(function () {
-                        $(".para").replaceWith("<h4 style='color: white;'>blablabla</h4>");
+                        $(".parag").replaceWith("<h4 style='color: white;'>blablabla</h4>");
                       });
                     });
                   </script>
@@ -839,12 +839,12 @@
                       <button id="btnAfterDiv">.after</button>
                       <br><br>
                       <ul>
-                        <li class="supprimer" style="color: white; list-style: lower-alpha;">pioupioupiou</li>
-                        <li class="supprimer" style="color: white; list-style: lower-alpha;">pioupioupiou</li>
-                        <li class="supprimer" style="color: white; list-style: lower-alpha;">pioupioupiou</li>
-                        <li class="supprimer" style="color: white; list-style: lower-alpha;">pioupioupiou</li>
-                        <li class="supprimer" style="color: white; list-style: lower-alpha;">pioupioupiou</li>
-                        <li class="supprimer" style="color: white; list-style: lower-alpha;">pioupioupiou</li>
+                        <li class="af" style="color: white; list-style: lower-alpha;">pioupioupiou</li>
+                        <li class="af" style="color: white; list-style: lower-alpha;">pioupioupiou</li>
+                        <li class="af" style="color: white; list-style: lower-alpha;">pioupioupiou</li>
+                        <li class="af" style="color: white; list-style: lower-alpha;">pioupioupiou</li>
+                        <li class="af" style="color: white; list-style: lower-alpha;">pioupioupiou</li>
+                        <li class="af" style="color: white; list-style: lower-alpha;">pioupioupiou</li>
                     </ul>
                     <br><br><br>
                       <img id="imgAfter" class="img-fluid" src="assets/img/after.png" alt="">
@@ -854,7 +854,7 @@
                       <script>
                         $(document).ready(function () {
                           $("#btnAfterDiv").click(function () {
-                            $(".supprimer").after("<h4 style='color: white;'>blablabla</h4>");
+                            $(".af").after("<h4 style='color: white;'>blablabla</h4>");
                           });
                         });
                       </script>
@@ -871,12 +871,12 @@
                         <button id="btnBeforeDiv">.before</button>
                         <br><br>
                         <ul>
-                          <li class="supprimer" style="color: white; list-style: lower-alpha;">pioupioupiou</li>
-                          <li class="supprimer" style="color: white; list-style: lower-alpha;">pioupioupiou</li>
-                          <li class="supprimer" style="color: white; list-style: lower-alpha;">pioupioupiou</li>
-                          <li class="supprimer" style="color: white; list-style: lower-alpha;">pioupioupiou</li>
-                          <li class="supprimer" style="color: white; list-style: lower-alpha;">pioupioupiou</li>
-                          <li class="supprimer" style="color: white; list-style: lower-alpha;">pioupioupiou</li>
+                          <li class="list" style="color: white; list-style: lower-alpha;">pioupioupiou</li>
+                          <li class="list" style="color: white; list-style: lower-alpha;">pioupioupiou</li>
+                          <li class="list" style="color: white; list-style: lower-alpha;">pioupioupiou</li>
+                          <li class="list" style="color: white; list-style: lower-alpha;">pioupioupiou</li>
+                          <li class="list" style="color: white; list-style: lower-alpha;">pioupioupiou</li>
+                          <li class="list" style="color: white; list-style: lower-alpha;">pioupioupiou</li>
                       </ul>
                       <br><br><br>
                       
@@ -887,7 +887,7 @@
                         <script>
                           $(document).ready(function () {
                             $("#btnBeforeDiv").click(function () {
-                              $(".supprimer").before("<h4 style='color: white;'>blablabla</h4>");
+                              $(".list").before("<h4 style='color: white;'>blablabla</h4>");
                             });
                           });
                         </script>
